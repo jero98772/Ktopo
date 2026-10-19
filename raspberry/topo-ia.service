@@ -1,0 +1,14 @@
+[Unit]
+Description=TOPO S14 - cerebro con IA
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=__USUARIO__
+WorkingDirectory=__DIR__
+ExecStart=__PY__ __DIR__/topo_ia.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

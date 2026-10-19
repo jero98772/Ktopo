@@ -1,0 +1,420 @@
+{
+ "piezas": [
+  {
+   "nombre": "chasis_delantero",
+   "cantidad": 1,
+   "material": "PETG",
+   "nota": "Pared 3 mm, 4 perímetros, 25 % relleno",
+   "medida_mm": [
+    150,
+    150,
+    99
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 200.8,
+   "gramos_aprox": 115
+  },
+  {
+   "nombre": "chasis_trasero",
+   "cantidad": 1,
+   "material": "PETG",
+   "nota": "Igual que la delantera",
+   "medida_mm": [
+    150,
+    150,
+    70
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 169.6,
+   "gramos_aprox": 97
+  },
+  {
+   "nombre": "bandeja_electronica",
+   "cantidad": 1,
+   "material": "PLA/PETG",
+   "nota": "Rejilla M3 cada 10 mm",
+   "medida_mm": [
+    128,
+    143,
+    3
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 48.0,
+   "gramos_aprox": 27
+  },
+  {
+   "nombre": "collar_portasatelites",
+   "cantidad": 1,
+   "material": "PETG",
+   "nota": "Pieza fija: sostiene 2 rodamientos y los 4 satélites",
+   "medida_mm": [
+    140,
+    140,
+    58
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 165.4,
+   "gramos_aprox": 95
+  },
+  {
+   "nombre": "engranaje_A",
+   "cantidad": 1,
+   "material": "PETG/Nylon",
+   "nota": "100 % relleno o 6 perímetros. Agujero en D",
+   "medida_mm": [
+    52,
+    52,
+    9
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 9.8,
+   "gramos_aprox": 6
+  },
+  {
+   "nombre": "satelite",
+   "cantidad": 4,
+   "material": "PETG/Nylon",
+   "nota": "100 % relleno",
+   "medida_mm": [
+    33,
+    33,
+    11
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 4.5,
+   "gramos_aprox": 10
+  },
+  {
+   "nombre": "cortador_trasero",
+   "cantidad": 1,
+   "material": "PETG",
+   "nota": "Incluye el engranaje B. Gira AL REVÉS del cono",
+   "medida_mm": [
+    132,
+    134,
+    53
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 121.2,
+   "gramos_aprox": 69
+  },
+  {
+   "nombre": "cono_delantero",
+   "cantidad": 1,
+   "material": "PETG",
+   "nota": "Gira con el eje. 3 perímetros, 15 % relleno",
+   "medida_mm": [
+    98,
+    99,
+    116
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 286.7,
+   "gramos_aprox": 164
+  },
+  {
+   "nombre": "espaciador_eje",
+   "cantidad": 1,
+   "material": "PLA",
+   "nota": "Va entre el rodamiento y el engranaje A",
+   "medida_mm": [
+    13,
+    13,
+    9
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 0.7,
+   "gramos_aprox": 0
+  },
+  {
+   "nombre": "difusor_led",
+   "cantidad": 1,
+   "material": "PETG transparente",
+   "nota": "Modo jarrón o 2 perímetros",
+   "medida_mm": [
+    143,
+    143,
+    12
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 8.1,
+   "gramos_aprox": 5
+  },
+  {
+   "nombre": "casco_delantero",
+   "cantidad": 1,
+   "material": "PLA/PETG",
+   "nota": "Imprimir parado, sin soportes",
+   "medida_mm": [
+    87,
+    150,
+    155
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 133.1,
+   "gramos_aprox": 76
+  },
+  {
+   "nombre": "casco_trasero",
+   "cantidad": 1,
+   "material": "PLA/PETG",
+   "nota": "Imprimir parado, sin soportes. Se quita para cambiar batería",
+   "medida_mm": [
+    87,
+    151,
+    150
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 136.6,
+   "gramos_aprox": 78
+  },
+  {
+   "nombre": "cabina",
+   "cantidad": 1,
+   "material": "PLA/PETG",
+   "nota": "Imprimir boca abajo sobre el techo. Lleva la cámara",
+   "medida_mm": [
+    70,
+    64,
+    38
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 34.1,
+   "gramos_aprox": 19
+  },
+  {
+   "nombre": "rueda_rin",
+   "cantidad": 4,
+   "material": "PETG",
+   "nota": "Acople hexagonal 12 mm + tornillo M4",
+   "medida_mm": [
+    79,
+    79,
+    40
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 80.1,
+   "gramos_aprox": 183
+  },
+  {
+   "nombre": "rueda_llanta_TPU",
+   "cantidad": 4,
+   "material": "TPU 95A",
+   "nota": "Si no tienes TPU, imprímela en PETG",
+   "medida_mm": [
+    100,
+    100,
+    34
+   ],
+   "cabe_220": true,
+   "volumen_cm3": 90.8,
+   "gramos_aprox": 208
+  }
+ ],
+ "nodos": [
+  [
+   "chasis_delantero",
+   "impreso"
+  ],
+  [
+   "chasis_trasero",
+   "impreso"
+  ],
+  [
+   "bandeja_electronica",
+   "impreso"
+  ],
+  [
+   "collar_portasatelites",
+   "impreso"
+  ],
+  [
+   "engranaje_A",
+   "impreso"
+  ],
+  [
+   "satelite_1",
+   "impreso"
+  ],
+  [
+   "satelite_2",
+   "impreso"
+  ],
+  [
+   "satelite_3",
+   "impreso"
+  ],
+  [
+   "satelite_4",
+   "impreso"
+  ],
+  [
+   "cortador_trasero",
+   "impreso"
+  ],
+  [
+   "cono_delantero",
+   "impreso"
+  ],
+  [
+   "espaciador_eje",
+   "impreso"
+  ],
+  [
+   "difusor_led",
+   "impreso"
+  ],
+  [
+   "casco_delantero",
+   "impreso"
+  ],
+  [
+   "casco_trasero",
+   "impreso"
+  ],
+  [
+   "cabina",
+   "impreso"
+  ],
+  [
+   "rueda_rin_1",
+   "impreso"
+  ],
+  [
+   "rueda_rin_2",
+   "impreso"
+  ],
+  [
+   "rueda_rin_3",
+   "impreso"
+  ],
+  [
+   "rueda_rin_4",
+   "impreso"
+  ],
+  [
+   "rueda_llanta_TPU_1",
+   "impreso"
+  ],
+  [
+   "rueda_llanta_TPU_2",
+   "impreso"
+  ],
+  [
+   "rueda_llanta_TPU_3",
+   "impreso"
+  ],
+  [
+   "rueda_llanta_TPU_4",
+   "impreso"
+  ],
+  [
+   "motor_traccion_1",
+   "comprado"
+  ],
+  [
+   "motor_traccion_2",
+   "comprado"
+  ],
+  [
+   "motor_traccion_3",
+   "comprado"
+  ],
+  [
+   "motor_traccion_4",
+   "comprado"
+  ],
+  [
+   "motor_taladro",
+   "comprado"
+  ],
+  [
+   "eje_8mm",
+   "comprado"
+  ],
+  [
+   "acople_6a8",
+   "comprado"
+  ],
+  [
+   "rodamiento_608_1",
+   "comprado"
+  ],
+  [
+   "rodamiento_608_2",
+   "comprado"
+  ],
+  [
+   "rodamiento_608_3",
+   "comprado"
+  ],
+  [
+   "pasador_M4_1",
+   "comprado"
+  ],
+  [
+   "pasador_M4_2",
+   "comprado"
+  ],
+  [
+   "pasador_M4_3",
+   "comprado"
+  ],
+  [
+   "pasador_M4_4",
+   "comprado"
+  ],
+  [
+   "raspberry_pi5",
+   "comprado"
+  ],
+  [
+   "bateria_3S2P",
+   "comprado"
+  ],
+  [
+   "buck_5V5A_pi",
+   "comprado"
+  ],
+  [
+   "buck_5V3A",
+   "comprado"
+  ],
+  [
+   "bts7960_izq",
+   "comprado"
+  ],
+  [
+   "bts7960_der",
+   "comprado"
+  ],
+  [
+   "bts7960_taladro",
+   "comprado"
+  ],
+  [
+   "esp32_con_bornera",
+   "comprado"
+  ],
+  [
+   "camara_pi3",
+   "comprado"
+  ],
+  [
+   "vl53l0x_1",
+   "comprado"
+  ],
+  [
+   "vl53l0x_2",
+   "comprado"
+  ],
+  [
+   "mpu6050",
+   "comprado"
+  ],
+  [
+   "tira_ws2812",
+   "comprado"
+  ]
+ ]
+}
