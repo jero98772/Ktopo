@@ -1,52 +1,59 @@
-# TOPO S14 — carro perforador impreso en 3D con IA
+# Ktopo — 3D-printed drilling rover with AI
 
-Todo lo necesario para construirlo: piezas 3D, firmware del ESP32 y software de visión para la Raspberry Pi 5.
-La guía completa (visor 3D, electrónica, diagrama de conexiones y orden de armado) está en la página del proyecto.
+Everything you need to build it: 3D parts, ESP32 firmware and vision software for the Raspberry Pi 5.
+The full guide (3D viewer, electronics, wiring diagram and assembly order) is on the project page.
 
-## Carpetas
+## Folders
 
-| Carpeta | Contenido |
+| Folder | Contents |
 |---|---|
-| `cad/stl/` | 15 piezas listas para imprimir, ya orientadas y sin soportes (caben en 220 × 220 mm) |
-| `cad/step/` | Las mismas piezas en STEP para editarlas en Fusion 360, FreeCAD u Onshape, más `TOPO_S14_ensamble.step` |
-| `cad/topo_cad.py` | Modelo paramétrico en CadQuery. Cambia los parámetros del inicio y ejecuta `python3 topo_cad.py` |
-| `cad/TOPO_S14.glb` | Ensamblaje completo para verlo en cualquier visor 3D |
-| `firmware/topo_esp32/` | Firmware del ESP32 (Arduino IDE) |
-| `firmware/simulador_pc/` | Pruebas del firmware en el PC: `g++ -std=gnu++17 -DSIM -I. sim.cpp -o sim && ./sim` |
-| `raspberry/` | Cerebro con IA (`topo_ia.py`), instalador y servicio de arranque |
+| `cad/stl/` | 15 parts ready to print, already oriented, no supports needed (they fit a 220 × 220 mm bed) |
+| `cad/step/` | The same parts as STEP files to edit in Fusion 360, FreeCAD or Onshape, plus `Ktopo_assembly.step` |
+| `cad/ktopo_cad.py` | Parametric CadQuery model. Change the parameters at the top and run `python3 ktopo_cad.py` |
+| `cad/Ktopo.glb` | Full assembly to open in any 3D viewer |
+| `firmware/ktopo_esp32/` | ESP32 firmware (Arduino IDE) |
+| `firmware/pc_simulator/` | Firmware tests on your PC: `g++ -std=gnu++17 -DSIM -I. sim.cpp -o sim && ./sim` |
+| `raspberry/` | AI brain (`ktopo_ai.py`), installer and start-up service |
+| `drawings/` | Wiring diagram, drill mechanism and software architecture (PNG and SVG), plus renders |
 
-## Cantidades a imprimir
+## How many to print
 
-| Pieza | Cant. | Material |
+| Part | Qty | Material |
 |---|---|---|
-| chasis_delantero, chasis_trasero | 1 + 1 | PETG |
-| casco_delantero, casco_trasero, cabina | 1 + 1 + 1 | PLA o PETG |
-| collar_portasatelites, cortador_trasero, cono_delantero | 1 + 1 + 1 | PETG |
-| engranaje_A | 1 | PETG o nylon, 100 % relleno |
-| satelite | 4 | PETG o nylon, 100 % relleno |
-| espaciador_eje, difusor_led, bandeja_electronica | 1 + 1 + 1 | PLA / PETG transparente / PLA |
-| rueda_rin | 4 | PETG |
-| rueda_llanta_TPU | 4 | TPU 95A |
+| chassis_front, chassis_rear | 1 + 1 | PETG |
+| hull_front, hull_rear, cab | 1 + 1 + 1 | PLA or PETG |
+| collar_carrier, rear_cutter, front_cone | 1 + 1 + 1 | PETG |
+| gear_A | 1 | PETG or nylon, 100 % infill |
+| spider_gear | 4 | PETG or nylon, 100 % infill |
+| shaft_spacer, led_diffuser, electronics_deck | 1 + 1 + 1 | PLA / clear PETG / PLA |
+| wheel_rim | 4 | PETG |
+| wheel_tire_TPU | 4 | TPU 95A |
 
-Filamento total aproximado: 1.1 kg.
+Approximate total filament: 1.2 kg.
 
-## Arranque rápido
+## Quick start
 
-1. **ESP32**: en Arduino IDE instala el núcleo *esp32* (Espressif) y las librerías **VL53L0X** (Pololu) y **Adafruit NeoPixel**.
-   Placa: *ESP32 Dev Module*. Sube `firmware/topo_esp32/topo_esp32.ino`.
-   Prueba en el monitor serie (115200): `V 30 30` mueve las ruedas, `T 40` el taladro, `X` es parada de emergencia y `R` la quita.
-2. **Raspberry Pi 5**: graba Raspberry Pi OS de 64 bits con el nombre de equipo `topo`, copia esta carpeta y ejecuta
-   `bash raspberry/instalar.sh`. Al reiniciar abre `http://topo.local:8000` en el celular.
-3. **Sin hardware**: `python3 raspberry/topo_ia.py --sim` y abre `http://localhost:8000` (necesita `pip install flask opencv-python numpy`).
+1. **ESP32**: in the Arduino IDE install the *esp32* core (Espressif) and the **VL53L0X** (Pololu) and **Adafruit NeoPixel** libraries.
+   Board: *ESP32 Dev Module*. Upload `firmware/ktopo_esp32/ktopo_esp32.ino`.
+   Test from the Serial Monitor (115200): `V 30 30` turns the wheels, `T 40` the drill, `X` is the emergency stop and `R` clears it.
+2. **Raspberry Pi 5**: flash Raspberry Pi OS 64-bit with the hostname `ktopo`, copy this folder over and run
+   `bash raspberry/install.sh`. After the reboot, open `http://ktopo.local:8000` on your phone.
+3. **No hardware**: `python3 raspberry/ktopo_ai.py --sim` and open `http://localhost:8000` (needs `pip install flask opencv-python numpy`).
 
-## Ajustes que quizá debas cambiar en el firmware
+## Bluetooth
 
-- `INVERTIR_IZQ`, `INVERTIR_DER`, `INVERTIR_TAL`: si un lado o el taladro gira al revés.
-- `RELACION_TRACCION`, `RELACION_TALADRO`: la relación de la caja de tus motores (viene en la etiqueta).
-- `USAR_ENCODER_TALADRO = false` si no conectas el encoder del taladro.
-- `OBST_MM`: distancia de frenado medida desde el frente del chasis (la punta sobresale unos 18 cm).
+Pair your phone with **Ktopo**. It accepts the same letters as the old app:
+`A` forward, `a` backward, `i` / `d` pivot left / right, `I` / `D` spin in place, `S` stop the wheels,
+`M` / `m` drill at max / off, `1` demo show, `0` everything off and control back to the AI.
 
-## Seguridad
+## Firmware settings you may need to change
 
-El taladro atrapa dedos y cables aunque sea de plástico: apágalo antes de tocarlo. Carga la batería fuera del carro
-y vigilada. Haz la primera prueba con el fusible puesto y las ruedas en el aire.
+- `INVERT_LEFT`, `INVERT_RIGHT`, `INVERT_DRILL`: if a side or the drill turns the wrong way.
+- `DRIVE_GEAR_RATIO`, `DRILL_GEAR_RATIO`: the gear ratio of your motors (printed on the label).
+- `USE_DRILL_ENCODER = false` if you don't wire the drill encoder.
+- `OBST_MM`: braking distance measured from the front of the chassis (the drill tip sticks out about 18 cm).
+
+## Safety
+
+The drill grabs fingers and cables even though it is plastic: turn it off before touching it. Charge the battery
+outside the rover and under supervision. Do the first test with the fuse in and the wheels off the ground.

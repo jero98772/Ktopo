@@ -1,0 +1,420 @@
+{
+ "parts": [
+  {
+   "name": "chassis_front",
+   "qty": 1,
+   "material": "PETG",
+   "note": "3 mm walls, 4 perimeters, 25 % infill",
+   "size_mm": [
+    150,
+    150,
+    99
+   ],
+   "fits_220": true,
+   "volume_cm3": 200.8,
+   "grams_approx": 115
+  },
+  {
+   "name": "chassis_rear",
+   "qty": 1,
+   "material": "PETG",
+   "note": "Same settings as the front half",
+   "size_mm": [
+    150,
+    150,
+    70
+   ],
+   "fits_220": true,
+   "volume_cm3": 169.6,
+   "grams_approx": 97
+  },
+  {
+   "name": "electronics_deck",
+   "qty": 1,
+   "material": "PLA/PETG",
+   "note": "M3 grid every 10 mm",
+   "size_mm": [
+    128,
+    143,
+    3
+   ],
+   "fits_220": true,
+   "volume_cm3": 48.0,
+   "grams_approx": 27
+  },
+  {
+   "name": "collar_carrier",
+   "qty": 1,
+   "material": "PETG",
+   "note": "Fixed part: holds 2 bearings and the 4 spider gears",
+   "size_mm": [
+    140,
+    140,
+    58
+   ],
+   "fits_220": true,
+   "volume_cm3": 165.4,
+   "grams_approx": 95
+  },
+  {
+   "name": "gear_A",
+   "qty": 1,
+   "material": "PETG/Nylon",
+   "note": "100 % infill or 6 perimeters. D-shaped bore",
+   "size_mm": [
+    52,
+    52,
+    9
+   ],
+   "fits_220": true,
+   "volume_cm3": 9.8,
+   "grams_approx": 6
+  },
+  {
+   "name": "spider_gear",
+   "qty": 4,
+   "material": "PETG/Nylon",
+   "note": "100 % infill",
+   "size_mm": [
+    33,
+    33,
+    11
+   ],
+   "fits_220": true,
+   "volume_cm3": 4.5,
+   "grams_approx": 10
+  },
+  {
+   "name": "rear_cutter",
+   "qty": 1,
+   "material": "PETG",
+   "note": "Includes gear B. Turns OPPOSITE to the cone",
+   "size_mm": [
+    132,
+    134,
+    53
+   ],
+   "fits_220": true,
+   "volume_cm3": 121.2,
+   "grams_approx": 69
+  },
+  {
+   "name": "front_cone",
+   "qty": 1,
+   "material": "PETG",
+   "note": "Turns with the shaft. 3 perimeters, 15 % infill",
+   "size_mm": [
+    98,
+    99,
+    116
+   ],
+   "fits_220": true,
+   "volume_cm3": 286.7,
+   "grams_approx": 164
+  },
+  {
+   "name": "shaft_spacer",
+   "qty": 1,
+   "material": "PLA",
+   "note": "Goes between the bearing and gear A",
+   "size_mm": [
+    13,
+    13,
+    9
+   ],
+   "fits_220": true,
+   "volume_cm3": 0.7,
+   "grams_approx": 0
+  },
+  {
+   "name": "led_diffuser",
+   "qty": 1,
+   "material": "Clear PETG",
+   "note": "Vase mode or 2 perimeters",
+   "size_mm": [
+    143,
+    143,
+    12
+   ],
+   "fits_220": true,
+   "volume_cm3": 8.1,
+   "grams_approx": 5
+  },
+  {
+   "name": "hull_front",
+   "qty": 1,
+   "material": "PLA/PETG",
+   "note": "Print standing up, no supports",
+   "size_mm": [
+    87,
+    150,
+    155
+   ],
+   "fits_220": true,
+   "volume_cm3": 133.1,
+   "grams_approx": 76
+  },
+  {
+   "name": "hull_rear",
+   "qty": 1,
+   "material": "PLA/PETG",
+   "note": "Print standing up, no supports. Remove it to swap the battery",
+   "size_mm": [
+    87,
+    151,
+    150
+   ],
+   "fits_220": true,
+   "volume_cm3": 136.6,
+   "grams_approx": 78
+  },
+  {
+   "name": "cab",
+   "qty": 1,
+   "material": "PLA/PETG",
+   "note": "Print upside down on its roof. Holds the camera",
+   "size_mm": [
+    70,
+    64,
+    38
+   ],
+   "fits_220": true,
+   "volume_cm3": 34.1,
+   "grams_approx": 19
+  },
+  {
+   "name": "wheel_rim",
+   "qty": 4,
+   "material": "PETG",
+   "note": "12 mm hex coupler + M4 screw",
+   "size_mm": [
+    79,
+    79,
+    40
+   ],
+   "fits_220": true,
+   "volume_cm3": 80.1,
+   "grams_approx": 183
+  },
+  {
+   "name": "wheel_tire_TPU",
+   "qty": 4,
+   "material": "TPU 95A",
+   "note": "No TPU? Print it in PETG",
+   "size_mm": [
+    100,
+    100,
+    34
+   ],
+   "fits_220": true,
+   "volume_cm3": 90.8,
+   "grams_approx": 208
+  }
+ ],
+ "nodes": [
+  [
+   "chassis_front",
+   "printed"
+  ],
+  [
+   "chassis_rear",
+   "printed"
+  ],
+  [
+   "electronics_deck",
+   "printed"
+  ],
+  [
+   "collar_carrier",
+   "printed"
+  ],
+  [
+   "gear_A",
+   "printed"
+  ],
+  [
+   "spider_gear_1",
+   "printed"
+  ],
+  [
+   "spider_gear_2",
+   "printed"
+  ],
+  [
+   "spider_gear_3",
+   "printed"
+  ],
+  [
+   "spider_gear_4",
+   "printed"
+  ],
+  [
+   "rear_cutter",
+   "printed"
+  ],
+  [
+   "front_cone",
+   "printed"
+  ],
+  [
+   "shaft_spacer",
+   "printed"
+  ],
+  [
+   "led_diffuser",
+   "printed"
+  ],
+  [
+   "hull_front",
+   "printed"
+  ],
+  [
+   "hull_rear",
+   "printed"
+  ],
+  [
+   "cab",
+   "printed"
+  ],
+  [
+   "wheel_rim_1",
+   "printed"
+  ],
+  [
+   "wheel_rim_2",
+   "printed"
+  ],
+  [
+   "wheel_rim_3",
+   "printed"
+  ],
+  [
+   "wheel_rim_4",
+   "printed"
+  ],
+  [
+   "wheel_tire_TPU_1",
+   "printed"
+  ],
+  [
+   "wheel_tire_TPU_2",
+   "printed"
+  ],
+  [
+   "wheel_tire_TPU_3",
+   "printed"
+  ],
+  [
+   "wheel_tire_TPU_4",
+   "printed"
+  ],
+  [
+   "drive_motor_1",
+   "bought"
+  ],
+  [
+   "drive_motor_2",
+   "bought"
+  ],
+  [
+   "drive_motor_3",
+   "bought"
+  ],
+  [
+   "drive_motor_4",
+   "bought"
+  ],
+  [
+   "drill_motor",
+   "bought"
+  ],
+  [
+   "shaft_8mm",
+   "bought"
+  ],
+  [
+   "coupler_6to8",
+   "bought"
+  ],
+  [
+   "bearing_608_1",
+   "bought"
+  ],
+  [
+   "bearing_608_2",
+   "bought"
+  ],
+  [
+   "bearing_608_3",
+   "bought"
+  ],
+  [
+   "pin_M4_1",
+   "bought"
+  ],
+  [
+   "pin_M4_2",
+   "bought"
+  ],
+  [
+   "pin_M4_3",
+   "bought"
+  ],
+  [
+   "pin_M4_4",
+   "bought"
+  ],
+  [
+   "raspberry_pi5",
+   "bought"
+  ],
+  [
+   "battery_3S2P",
+   "bought"
+  ],
+  [
+   "buck_5V5A_pi",
+   "bought"
+  ],
+  [
+   "buck_5V3A",
+   "bought"
+  ],
+  [
+   "bts7960_left",
+   "bought"
+  ],
+  [
+   "bts7960_right",
+   "bought"
+  ],
+  [
+   "bts7960_drill",
+   "bought"
+  ],
+  [
+   "esp32_terminal_board",
+   "bought"
+  ],
+  [
+   "camera_pi3",
+   "bought"
+  ],
+  [
+   "vl53l0x_1",
+   "bought"
+  ],
+  [
+   "vl53l0x_2",
+   "bought"
+  ],
+  [
+   "mpu6050",
+   "bought"
+  ],
+  [
+   "ws2812_strip",
+   "bought"
+  ]
+ ]
+}
